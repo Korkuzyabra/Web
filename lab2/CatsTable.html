@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица породы кошек</title>
+</head>
+<body background="https://phonoteka.org/uploads/posts/2021-04/1617816997_34-p-fon-dlya-prezentatsii-estetika-34.jpg">
+    <p>
+        <a href="CatsTable.html">Таблица породы кошек</a><br>
+        <a href="CatsMain.html">Породы кошек</a>
+    </p>
+    <hr color="#926eae">
+    <details>
+        <summary>График</summary>
+        <table cellpadding="10" valign="top">
+            <form>
+                <tr align="center" >
+                    <td>
+                        Значение по оси ОХ
+                    </td>
+                    <td>
+                        Результат<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="radio" name="CatType" value="cat">Порода кошки
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_1">Минимальный размер, см
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_2">Максимальный размер, см
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_3">Минимальный вес, кг
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_2">Максимальный вес, кг
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_3">Минимальная продолжительность жизни, лет
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="CatType1" value="1_3">Максимальная продолжительность жизни, лет
+                        </label>
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <p>
+            <input type="button" value="Построить">
+        </p>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form>
+            <p>
+                <label for="CatType2">Порода:</label>
+                <input type="text" id="CatType2">
+            </p>
+            <p>
+                <label for="CatType3">Минимальный размер от:</label>
+                <input type="number" id="CatType3">
+                <label for="CatType4"> до </label>
+                <input type="number" id="CatType4">
+            </p>
+            <p>
+                <label for="CatType5">Максимальный размер от:</label>
+                <input type="number" id="CatType5">
+                <label for="CatType6"> до </label>
+                <input type="number" id="CatType6">
+            </p>
+            <p>
+                <label for="CatType7">Минимальный вес от:</label>
+                <input type="number" id="CatType7">
+                <label for="CatType8"> до </label>
+                <input type="number" id="CatType8">
+            </p>
+            <p>
+                <label for="CatType9">Максимальный вес от:</label>
+                <input type="number" id="CatType9">
+                <label for="CatType10"> до </label>
+                <input type="number" id="CatType10">
+            </p>
+            <p>
+                <label for="CatType11">Минимальная продолжительность жизни от:</label>
+                <input type="number" id="CatType11">
+                <label for="CatType12"> до </label>
+                <input type="number" id="CatType12">
+            </p>
+            <p>
+                <label for="CatType13">Максимальная продолжительность жизни от:</label>
+                <input type="number" id="CatType13">
+                <label for="CatType14"> до </label>
+                <input type="number" id="CatType14">
+            </p>
+            <p>
+                <input type="button" value="Фильтровать">
+            </p>
+        </form>
+    </details>
+    <details>
+        <summary>Сортировака</summary>
+        <p>
+            <label for="sort1">Сортировать по:</label>
+            <select id="sort1">
+                <option value="0"> минимальному размеру</option>
+                <option value="1"> максимальному размеру </option>
+                <option value="2"> минимальному весу </option>
+                <option value="3"> максимальному весу</option>
+                <option value="4"> минимальной продолжительности жизни </option>
+                <option value="5"> максимальной продолжительности жинзни </option>
+            </select>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="sortmin" value="min"> По убыванию
+            </label>
+        </p>
+        <p>
+            <input type="button" value="Сортировать">
+        </p>
+    </details>
+    <table border="3" align="left" valign="top" bgcolor="#abff05">
+        <tr>
+            <td>Название породы</td>
+            <td>Минимальный размер, см</td>
+            <td>Максимальный размер, см</td>
+            <td>Минимальный вес, кг</td>
+            <td>Максимальный вес, кг</td>
+            <td>Минимальная продолжительность жизни, лет</td>
+            <td>Максимальная продолжительность жизни, лет</td>
+        </tr>
+        <tr>
+            <td>Абиссинская</td>
+            <td>26</td>
+            <td>32</td>
+            <td>3</td>
+            <td>7</td>
+            <td>12</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Австралийский мист</td>
+            <td>15</td>
+            <td>20</td>
+            <td>5</td>
+            <td>6</td>
+            <td>13</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Американская короткошерстная</td>
+            <td>20</td>
+            <td>25</td>
+            <td>3</td>
+            <td>8</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Американская жесткошерстная</td>
+            <td>25</td>
+            <td>30</td>
+            <td>4</td>
+            <td>8</td>
+            <td>12</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Американский бобтейл</td>
+            <td>30</td>
+            <td>35</td>
+            <td>4</td>
+            <td>9</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Американский кёрл</td>
+            <td>26</td>
+            <td>28</td>
+            <td>3</td>
+            <td>7</td>
+            <td>14</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Аравийский мау</td>
+            <td>25</td>
+            <td>30</td>
+            <td>6</td>
+            <td>8</td>
+            <td>14</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Балинезийская</td>
+            <td>23</td>
+            <td>25</td>
+            <td>2</td>
+            <td>5</td>
+            <td>10</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Бамбино</td>
+            <td>20</td>
+            <td>25</td>
+            <td>3</td>
+            <td>3</td>
+            <td>7</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Бенгальская</td>
+            <td>26</td>
+            <td>42</td>
+            <td>4</td>
+            <td>9</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Бирманская</td>
+            <td>25</td>
+            <td>30</td>
+            <td>3</td>
+            <td>5</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Бомбейская</td>
+            <td>20</td>
+            <td>30</td>
+            <td>3</td>
+            <td>5</td>
+            <td>15</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Бразильская короткошерстная</td>
+            <td>20</td>
+            <td>25</td>
+            <td>3</td>
+            <td>5</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Британская длинношерстная</td>
+            <td>30</td>
+            <td>32</td>
+            <td>4</td>
+            <td>8</td>
+            <td>9</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Британская короткошерстная</td>
+            <td>15</td>
+            <td>30</td>
+            <td>4</td>
+            <td>9</td>
+            <td>10</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Гималайская</td>
+            <td>27</td>
+            <td>30</td>
+            <td>4</td>
+            <td>6</td>
+            <td>14</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Донской сфинкс</td>
+            <td>26</td>
+            <td>30</td>
+            <td>3</td>
+            <td>4</td>
+            <td>11</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Дракон ли</td>
+            <td>30</td>
+            <td>38</td>
+            <td>3</td>
+            <td>5</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Египетский мау</td>
+            <td>26</td>
+            <td>30</td>
+            <td>4</td>
+            <td>6</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Канадские сфинксы</td>
+            <td>15</td>
+            <td>25</td>
+            <td>2</td>
+            <td>6</td>
+            <td>13</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Колорпойнт короткошерстный</td>
+            <td>20</td>
+            <td>25</td>
+            <td>3</td>
+            <td>5</td>
+            <td>13</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Корниш-рекс</td>
+            <td>23</td>
+            <td>27</td>
+            <td>3</td>
+            <td>5</td>
+            <td>14</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Короткошерстный ориентал</td>
+            <td>28</td>
+            <td>32</td>
+            <td>4</td>
+            <td>6</td>
+            <td>15</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Курильский бобтейл</td>
+            <td>24</td>
+            <td>28</td>
+            <td>5</td>
+            <td>7</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Лаперам</td>
+            <td>25</td>
+            <td>28</td>
+            <td>3</td>
+            <td>6</td>
+            <td>10</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Мачкины</td>
+            <td>12</td>
+            <td>16</td>
+            <td>2</td>
+            <td>3</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Мейн-кун</td>
+            <td>25</td>
+            <td>41</td>
+            <td>3</td>
+            <td>12</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Невская маскарадная</td>
+            <td>20</td>
+            <td>40</td>
+            <td>5</td>
+            <td>10</td>
+            <td>15</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Немецкий рекс</td>
+            <td>23</td>
+            <td>27</td>
+            <td>3</td>
+            <td>5</td>
+            <td>12</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Норвежская лесная</td>
+            <td>26</td>
+            <td>32</td>
+            <td>4</td>
+            <td>9</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Персидская</td>
+            <td>26</td>
+            <td>30</td>
+            <td>4</td>
+            <td>7</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Петербургские сфинсксы</td>
+            <td>25</td>
+            <td>30</td>
+            <td>3</td>
+            <td>5</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Пиксибоб</td>
+            <td>15</td>
+            <td>30</td>
+            <td>4</td>
+            <td>9</td>
+            <td>10</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Русская голубая</td>
+            <td>24</td>
+            <td>26</td>
+            <td>3</td>
+            <td>6</td>
+            <td>16</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Саванна</td>
+            <td>50</td>
+            <td>60</td>
+            <td>8</td>
+            <td>15</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Сиамская</td>
+            <td>24</td>
+            <td>28</td>
+            <td>4</td>
+            <td>8</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Сибирская</td>
+            <td>28</td>
+            <td>40</td>
+            <td>3</td>
+            <td>12</td>
+            <td>15</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Сингапурская</td>
+            <td>18</td>
+            <td>25</td>
+            <td>1</td>
+            <td>3</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Скоттиш-спрайт</td>
+            <td>28</td>
+            <td>30</td>
+            <td>3</td>
+            <td>5</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Сноу-шу</td>
+            <td>28</td>
+            <td>32</td>
+            <td>4</td>
+            <td>7</td>
+            <td>10</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Сомалийская</td>
+            <td>26</td>
+            <td>30</td>
+            <td>3</td>
+            <td>6</td>
+            <td>13</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Тайская</td>
+            <td>24</td>
+            <td>30</td>
+            <td>4</td>
+            <td>8</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Турецкая ангора</td>
+            <td>26</td>
+            <td>30</td>
+            <td>2</td>
+            <td>5</td>
+            <td>13</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Турецкий ван</td>
+            <td>30</td>
+            <td>40</td>
+            <td>4</td>
+            <td>9</td>
+            <td>15</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Украинский левкой</td>
+            <td>24</td>
+            <td>26</td>
+            <td>4</td>
+            <td>6</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Хайленд фолд</td>
+            <td>28</td>
+            <td>30</td>
+            <td>4</td>
+            <td>5</td>
+            <td>15</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Цейлонская</td>
+            <td>20</td>
+            <td>25</td>
+            <td>2</td>
+            <td>4</td>
+            <td>13</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Чаузи</td>
+            <td>40</td>
+            <td>50</td>
+            <td>9</td>
+            <td>15</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Шотландская вислоухая</td>
+            <td>24</td>
+            <td>26</td>
+            <td>4</td>
+            <td>7</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Экзотическая короткошерстная</td>
+            <td>26</td>
+            <td>30</td>
+            <td>3</td>
+            <td>7</td>
+            <td>12</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Японский бобтейл</td>
+            <td>24</td>
+            <td>26</td>
+            <td>4</td>
+            <td>7</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+    </table>
+</body>
+</html>

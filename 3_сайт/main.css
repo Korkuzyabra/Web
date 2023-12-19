@@ -1,0 +1,109 @@
+.cover{
+    width: 100%;
+    background-image: url("https://pixelbox.ru/wp-content/uploads/2021/09/background-chat-vk-25.jpg");
+    height: 210px;
+}
+.menu{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+    overflow: visible;
+    white-space: nowrap;
+}
+.menu div{
+    display: inline;
+    font: bold 1.2rem "Fira Sans", sans-serif;
+    margin: 2%;
+    padding: 2%;
+}
+.color{
+    color: deeppink;
+}
+h1{
+    text-align: center;
+    padding-top: 80px;
+    margin: auto;
+    font: bold 1.8rem "Fira Sans", sans-serif;
+}
+.block1{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.block_t{
+    display: block;
+    width: 55%;
+    height: 20%;
+    margin: 1%;
+    padding: 1%;
+    float: left;
+    border: black solid thin;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.size{
+    width: 36.62%;
+}
+.block_t img{
+    width: 100%;
+    height: 270px;
+    white-space: nowrap;
+}
+.block_t h2{
+    text-align: center;
+    padding-top: 5px;
+    margin: auto;
+    font: bold 1.1rem "Fira Sans", sans-serif;
+}
+.block_t span{
+    white-space: nowrap;
+    text-align: justify;
+}
+.block2{
+    display: block;
+    width: 100%;
+    overflow: visible;
+    white-space: nowrap;
+}
+.block_b{
+    display: block;
+    width: 45.8%;
+    height: 15%;
+    margin: 1%;
+    padding: 1%;
+    float: left;
+    background: #fdfcf4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.block_b img{
+    width: 50%;
+    float: left;
+    margin: 1%;
+    height: 150px;
+}
+.block_b h2{
+    text-align: left;
+    padding-top: 1px;
+    margin: 15px;
+    white-space: normal;
+    font: bold 1.1rem "Fira Sans", sans-serif;
+}
+.block_b span{
+    float: left;
+    margin-top: 7px;
+    text-align: justify;
+    white-space: normal;
+}
+.footer {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    border-top: double deeppink thick;
+}
+.right{
+    float: right;
+ }

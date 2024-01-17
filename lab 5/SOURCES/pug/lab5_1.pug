@@ -1,0 +1,52 @@
+mixin createMenu(list)
+    div.menu
+        span.color= "Menu_1"
+        each item in list
+            span= item
+
+mixin createBlock3
+    while j<=4
+        div.block3
+            img(src="https://s1.1zoom.ru/big3/434/Cats_Kittens_White_Grass_461681.jpg")
+            h2=title3
+            span=art1
+        -j++
+
+-var title1='О кошках'
+-var title2='Интересные факты о кошках'
+-var title3='Интересные'
+-var art='Ученые предполагают, что кошки и собаки произошли от одного предка — мелких хищников из вида Miacidae, живших в основном на деревьях примерно 66 миллионов лет назад.'
+-var art1='Ученые предполагают, что кошки и собаки произошли от одного'
+-var menu1=['Menu_2', 'Menu_3', 'Menu_4']
+-var inf1='© Герус П.А., Б9121-09.03.04/1, 2023-2024'
+-var inf2='✉ Контакты'
+-var i=1
+-var j=1
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        title #{title}
+        link(rel='stylesheet' type='text/css' href='..//css/main1.css')
+    body
+        div.search
+            form
+                input(name='s' type='text')
+                input(type='image' src="https://cdn.iconscout.com/icon/free/png-512/free-search-2456561-2036081.png?f=webp&w=512" width='15' height='15')
+        header
+            +createMenu(menu1)
+            h1=title1
+        article
+            div.block
+                div.block1
+                    img(src="https://i.pinimg.com/originals/51/77/48/5177485c5ab4cd03baca20a2fe5c81ab.jpg")
+                    h2=title2
+                    while i<=4
+                        span=art
+                        - i++
+                div.block2
+                    +createBlock3
+        footer
+            span=inf1
+            span.right=inf2

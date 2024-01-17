@@ -1,0 +1,76 @@
+back(size)
+    background-color #f1f1f1
+    box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4)
+    padding: size + "%"
+    margin 0 0 1% 0
+
+colorText = #6f6d6d
+
+body
+     background-color : #cea0a0
+
+html
+    color #3a3a37
+    background-color : #cea0a0
+    nav
+        back(0)
+        text-align right
+        & a
+            display inline-block
+            padding 1%
+            color colorText
+            text-decoration: none
+            &:hover
+            &.active
+                background-color #f87777
+                color #f8f8f8
+
+    div.images
+        display grid
+        grid-template-columns repeat(5, 1fr)
+        grid-gap 0.5%
+        back(1)
+        & img
+            width: 100%
+
+    article
+        width 80%
+        margin auto
+        display grid
+        grid-template-columns repeat(3, 1fr)
+        grid-gap 4%
+
+    & section
+         display grid
+         grid-template-columns 1fr 2fr
+         grid-gap 2%
+         align-items center
+         back(2)
+
+    & h3
+         grid-column 1/3
+         margin 0
+         text-align center
+
+    & img
+         width: 100%
+
+    footer
+        background-color colorText
+
+    & h4
+        padding 5px
+        color #f8f8f8
+
+@media all and (max-width 700px)
+  html div.images
+    grid-template-columns: 1fr
+
+  html div.images img
+    width 70%
+    height 300px
+    margin auto
+
+  html article
+    grid-template-columns: 1fr
+    margin: 100px auto

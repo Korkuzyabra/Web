@@ -1,0 +1,136 @@
+@import template
+
+SET_SIZE(iw,ih)
+  width iw
+  height ih
+SET_DESCRIPTION(column, color,st,fh,sst,ffh,pad)
+  .description_block
+    margin: 1% 5%
+    column-gap 1%
+    CREATE_GRID_TEMPLATE(1fr, column, color)
+    & img
+      grid-row: 1/2
+      grid-column st/fh
+      SET_SIZE(100%, auto)
+      position: sticky
+      float left
+      top: 17%
+    & div
+      SET_FONT_STYLE(400, normal, 1.5vw, 'Bellota', none, #670c29)
+      grid-row:1/2
+      grid-column: sst/ffh
+      background-color: rgba(197, 70, 111, 0.2)
+      margin:0.5%
+      padding: 2%
+  & .header
+    text-align: center
+    SET_FONT_STYLE(900, normal, 3vw, 'Roboto Slab', none, #000)
+
+    padding-top: pad
+    inset 0
+    z-index 3
+    background-color: #fff
+//
+//
+.content__images
+  white-space nowrap
+  overflow-y hidden
+  overflow-x scroll
+  SET_SIZE(100vw, auto)
+  background-color: #fff;
+
+  &::-webkit-scrollbar
+    display none
+
+  & .content__images__item
+    SET_SIZE(550px, 550px)
+    display: inline-block
+    position relative
+    text-align: center
+
+    & a.image
+      display:inline-block
+      position absolute
+
+      & img
+        SET_SIZE(550px, 550px)
+        position relative
+
+    & span
+      position relative
+      display: inline-block
+      SET_SIZE(inherit,auto)
+      margin-top 50%
+      pointer-events: none;
+
+
+.content__bengal_description
+  SET_DESCRIPTION(2fr 3fr, #fff, 1,2,2,3,3.5vw)
+
+.content__siam_description
+  SET_DESCRIPTION(2fr 1fr, rgba(229,229,229,0.6), 2,3,1,2,3.8vw)
+//
+//
+@media(max-width: 600px)
+  .content__images
+    .content__images__item
+      display block
+      justify-content center
+      span
+        SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #fff)
+
+  .content__bengal_description
+    position: relative
+    display block
+    .header
+      position: relative
+      SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+
+    .description_block
+      display block
+      margin 0
+      position: relative
+
+      img
+        position: relative
+        display block
+        margin 0
+        z-index 1
+        top 0
+
+      div
+        position relative
+        display block
+        margin 0
+        opacity 0.7
+        background-color: #000
+
+        SET_FONT_STYLE(400, normal, 1rem, 'Noto Serif Display', none, #fff)
+
+
+  .content__siam_description
+    position: relative
+    .header
+      position: relative
+      SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+
+    .description_block
+      display block
+      margin 0
+      position: relative
+
+      img
+        position: relative
+        display block
+        margin 0
+        z-index 1
+        top 0
+
+      div
+        position relative
+        display block
+        margin 0
+        opacity 0.7
+        background-color: #000
+
+        SET_FONT_STYLE(400, normal, 1rem, 'Noto Serif Display', none, #fff)

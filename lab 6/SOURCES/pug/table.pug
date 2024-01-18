@@ -1,0 +1,160 @@
+extends template.pug
+
+block variables
+    -var title='Table'
+    -var stylename='table.css'
+    -var list=[{'index':'1','class':'Абисинская','size':'29','weight':'5','wool':'Короткошерстная','age':'16','country':'Эфиопия','year':'1882'},{'index':'2','class':'Австралийский мист','size':'17','weight':'5','wool':'Короткошерстная','age':'14','country':'Австралия','year':'1998'},{'index':'3','class':'Американская короткошерстная','size':'22','weight':'5','wool':'Короткошерстная','age':'14','country':'США','year':'1904'},{'index':'4','class':'Американская жесткошерстная','size':'27','weight':'6','wool':'Короткошерстная','age':'14','country':'США','year':'1966'},{'index':'5','class':'Американский бобтейл','size':'32','weight':'6','wool':'Длинношерстная','age':'14','country':'США','year':'1960'},{'index':'6','class':'Американский кёрл','size':'27','weight':'5','wool':'Полудлинношерстная','age':'16','country':'США','year':'1986'},{'index':'7','class':'Аравийский мау','size':'27','weight':'7','wool':'Короткошерстная','age':'15','country':'Саудовская Аравия','year':'1023'},{'index':'8','class':'Балинезийская','size':'24','weight':'3','wool':'Полудлинношерстная','age':'12','country':'США','year':'1988'},{'index':'9','class':'Бамбино','size':'22','weight':'3','wool':'Лысая','age':'11','country':'США','year':'2005'},{'index':'10','class':'Бенгальская','size':'34','weight':'6','wool':'Короткошерстная','age':'13','country':'США','year':'1983'},{'index':'11','class':'Бирманская','size':'27','weight':'4','wool':'Полудлинношерстная','age':'13','country':'Мьянма','year':'1925'},{'index':'12','class':'Бомбейская','size':'25','weight':'4','wool':'Короткошерстная','age':'17','country':'США','year':'1950'},{'index':'13','class':'Бразильская короткошерстная','size':'22','weight':'4','wool':'Короткошерстная','age':'13','country':'Бразилия','year':'1980'},{'index':'14','class':'Британская длинношерстная','size':'31','weight':'6','wool':'Длинношерстная','age':'12','country':'Великобритания','year':'1917'},{'index':'15','class':'Британская короткошерстная','size':'22','weight':'6','wool':'Короткошерстная','age':'12','country':'Великобритания','year':'1889'},{'index':'16','class':'Гималайская','size':'28','weight':'5','wool':'Длинношерстная','age':'15','country':'США','year':'1935'},{'index':'17','class':'Донской сфинкс','size':'28','weight':'3','wool':'Лысая','age':'12','country':'Россия','year':'1986'},{'index':'18','class':'Дракон Ли','size':'34','weight':'4','wool':'Короткошерстная','age':'13','country':'Китай','year':'2003'},{'index':'19','class':'Египетская мау','size':'28','weight':'5','wool':'Короткошерстная','age':'14','country':'Египет','year':'1958'},{'index':'20','class':'Канадский сфинкс','size':'20','weight':'4','wool':'Лысая','age':'15','country':'Канада','year':'1966'},{'index':'21','class':'Колорпойнт короткошерстный','size':'22','weight':'4','wool':'Короткошерстная','age':'16','country':'США','year':'1974'},{'index':'22','class':'Корниш-рекс','size':'25','weight':'4','wool':'Короткошерстная','age':'15','country':'Великобритания','year':'1950'},{'index':'23','class':'Короткошерстный ориентал','size':'30','weight':'5','wool':'Короткошерстная','age':'17','country':'Таиланд','year':'1899'},{'index':'24','class':'Курильский бобтейл','size':'26','weight':'6','wool':'Полудлинношерстная','age':'13','country':'Россия','year':'1991'},{'index':'25','class':'Лаперам','size':'26','weight':'4','wool':'Длинношерстная','age':'12','country':'США','year':'1982'},{'index':'26','class':'Мачкин','size':'14','weight':'2','wool':'Короткошерстная','age':'13','country':'США','year':'1983'},{'index':'27','class':'Мейн-кун','size':'33','weight':'7','wool':'Длинношерстная','age':'13','country':'США','year':'1908'},{'index':'28','class':'Невская маскарадная','size':'30','weight':'7','wool':'Длинношерстная','age':'15','country':'Россия','year':'1988'},{'index':'29','class':'Немецкий рекс','size':'25','weight':'4','wool':'Короткошерстная','age':'15','country':'Германия','year':'1931'},{'index':'30','class':'Норвежская лесная','size':'29','weight':'6','wool':'Длинношерстная','age':'13','country':'Норвегия','year':'1938'},{'index':'31','class':'Персидская','size':'28','weight':'5','wool':'Длинношерстная','age':'13','country':'Иран','year':'1620'},{'index':'32','class':'Петербургские сфинксы','size':'27','weight':'4','wool':'Лысая','age':'9','country':'Россия','year':'1994'},{'index':'33','class':'Пиксибоб','size':'22','weight':'6','wool':'Полудлинношерстная','age':'12','country':'США','year':'1986'},{'index':'34','class':'Русская голубая','size':'25','weight':'6','wool':'Короткошерстная','age':'18','country':'Россия','year':'1875'},{'index':'35','class':'Саванна','size':'55','weight':'11','wool':'Короткошерстная','age':'13','country':'США','year':'1986'},{'index':'36','class':'Сиамская','size':'26','weight':'6','wool':'Короткошерстная','age':'13','country':'Таиланд','year':'1767'},{'index':'37','class':'Сибирская','size':'34','weight':'7','wool':'Длинношерстная','age':'17','country':'Россия','year':'1989'},{'index':'38','class':'Сингапурская','size':'21','weight':'2','wool':'Короткошерстная','age':'13','country':'Сингапур','year':'1976'},{'index':'39','class':'Скотиш-спрайт','size':'29','weight':'4','wool':'Короткошерстная','age':'14','country':'Великобритания','year':'1961'},{'index':'40','class':'Сноу-шу','size':'30','weight':'5','wool':'Короткошерстная','age':'12','country':'США','year':'1982'},{'index':'41','class':'Сомалийская','size':'28','weight':'4','wool':'Полудлинношерстная','age':'14','country':'США','year':'1972'},{'index':'42','class':'Тайская','size':'27','weight':'6','wool':'Короткошерстная','age':'13','country':'Таиланд','year':'1984'},{'index':'43','class':'Турецкая ангора','size':'28','weight':'3','wool':'Длинношерстная','age':'16','country':'Турция','year':'1973'},{'index':'44','class':'Турецкий ван','size':'35','weight':'6','wool':'Длинношерстная','age':'19','country':'Турция','year':'1955'},{'index':'44','class':'Украинский левкой','size':'25','weight':'5','wool':'Лысая','age':'13','country':'Украина','year':'2004'},{'index':'45','class':'Хайленд фолд','size':'29','weight':'4','wool':'Длинношерстная','age':'16','country':'Великобритания','year':'1961'},{'index':'46','class':'Цейлонская','size':'22','weight':'3','wool':'Короткошерстная','age':'15','country':'Шри-Ланка','year':'1984'},{'index':'47','class':'Чаузи','size':'45','weight':'12','wool':'Короткошерстная','age':'13','country':'США','year':'1995'},{'index':'48','class':'Шотландская вислоухая','size':'25','weight':'5','wool':'Короткошерстная','age':'13','country':'Великобритания','year':'1961'},{'index':'49','class':'Экзотическая короткошерстная','size':'28','weight':'5','wool':'Короткошерстная','age':'13','country':'США','year':'1950'},{'index':'50','class':'Японский бобтейл','size':'25','weight':'5','wool':'Короткошерстная','age':'13','country':'Япония','year':'1011'}]
+
+mixin CREATE_GRAPH()
+    form
+        div.content__graph__ox
+            div.text='Ось Ox'
+            input(type='radio', name='x', id='1')
+            label(for='1')='Порода кошки'
+            br
+
+            input(type='radio', name='x', id='2')
+            label(for='2')='Страна происхождения'
+            br
+
+        div.content__graph__oy
+            div.text='Ось Oy'
+
+            input(type='radio', name='y', id='3')
+            label(for='3')='Размер'
+            br
+
+            input(type='radio', name='y', id='4')
+            label(for='4')='Вес'
+            br
+
+            input(type='radio', name='y', id='5')
+            label(for='5')='Длина шерсти'
+            br
+
+            input(type='radio', name='y', id='6')
+            label(for='6')='Продолжительность жизни'
+            br
+
+            input(type='radio', name='y', id='7')
+            label(for='7')='Год появления'
+        //- input(type='button' value='Построить')
+mixin CREATE_SORT()
+    form
+        div.content__sort__block
+            select
+                option='нет'
+                option='по размеру'
+                option='по весу'
+                option='по продолжительности жизни'
+                option='по году'
+            input(type='checkbox', name='order',id='8')
+            label(for='8')='по убыванию'
+
+        div.content__sort__block
+            select
+                option='нет'
+                option='по размеру'
+                option='по весу'
+                option='по продолжительности жизни'
+                option='по году'
+            input(type='checkbox', name='order',id='9')
+            label(for='9')='по убыванию'
+
+        div.content__sort__block
+            select
+                option='нет'
+                option='по размеру'
+                option='по весу'
+                option='по продолжительности жизни'
+                option='по году'
+            input(type='checkbox', name='order',id='10')
+            label(for='10')='по убыванию'
+
+        div.content__sort__block
+            select
+                option='нет'
+                option='по размеру'
+                option='по весу'
+                option='по продолжительности жизни'
+                option='по году'
+            input(type='checkbox', name='order',id='11')
+            label(for='11')='по убыванию'
+
+        //- input(type="button",value="Сортировать")
+mixin CREATE_FILTER()
+    form
+        div.content__filter__block
+            label='Порода: '
+            input(type='text')
+
+        div.content__filter__block
+            label='Длина шерсти: '
+            input(type='text')
+
+        div.content__filter__block
+            label='Год: '
+            input(type='text')
+
+        div.content__filter__block
+            label='Страна: '
+            input(type='text')
+
+        div.content__filter__block
+            label='Размер: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+
+        div.content__filter__block
+            label='Вес: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+
+        div.content__filter__block
+            label='Продолжительность жизни: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+        //- input(type='button', value='Фильтровать')
+mixin FILL_TABLE(list)
+    each item in list
+        tr
+            td= item.index
+            td=item.class
+            td=item.size
+            td=item.weight
+            td=item.wool
+            td=item.age
+            td=item.country
+            td=item.year
+mixin CREATE_TABLE(list)
+    table
+        thead
+            tr
+                th= '#'
+                th= 'Название породы'
+                th= 'Средний размер'
+                th= 'Средний вес'
+                th= 'Длина шерсти'
+                th= 'Cредняя продолжительность жизни'
+                th= 'Страна происхождения'
+                th= 'Год появление породы'
+        tbody
+            +FILL_TABLE(list)
+mixin CREATE_DETAIL_LIST()
+    details.content__graph
+        summary= 'График'
+        +CREATE_GRAPH()
+    details.content__sort
+        summary='Сортировка'
+        +CREATE_SORT()
+    details.content__filter
+        summary='Фильтр'
+        +CREATE_FILTER()
+    div.content__tab__scrolltable
+        +CREATE_TABLE(list)
+
+block main_content
+    +CREATE_DETAIL_LIST()

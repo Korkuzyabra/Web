@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Table</title>
+    <link rel="stylesheet" href="../css/table.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&amp;family=Exo+2:wght@100&amp;display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="content">
+      <div class="content__navigation">
+        <div class="content__navigation__left">
+          <div class="content__navigation__left__dismenu__hiddenmenu"><a href="table.html">Таблица пород</a><a href="main.html">Породы кошек</a>
+          </div>
+        </div>
+        <div class="content__navigation__right"><a href="table.html">Таблица пород</a><a href="main.html">Породы кошек</a>
+        </div>
+      </div>
+      <details class="content__graph">
+        <summary>График</summary>
+        <form>
+          <div class="content__graph__ox">
+            <div class="text">Ось Ox</div>
+            <input type="radio" name="x" id="1"/>
+            <label for="1">Порода кошки</label><br/>
+            <input type="radio" name="x" id="2"/>
+            <label for="2">Страна происхождения</label><br/>
+          </div>
+          <div class="content__graph__oy">
+            <div class="text">Ось Oy</div>
+            <input type="radio" name="y" id="3"/>
+            <label for="3">Размер</label><br/>
+            <input type="radio" name="y" id="4"/>
+            <label for="4">Вес</label><br/>
+            <input type="radio" name="y" id="5"/>
+            <label for="5">Длина шерсти</label><br/>
+            <input type="radio" name="y" id="6"/>
+            <label for="6">Продолжительность жизни</label><br/>
+            <input type="radio" name="y" id="7"/>
+            <label for="7">Год появления</label>
+          </div>
+        </form>
+      </details>
+      <details class="content__sort">
+        <summary>Сортировка</summary>
+        <form>
+          <div class="content__sort__block">
+            <select>
+              <option>нет</option>
+              <option>по размеру</option>
+              <option>по весу</option>
+              <option>по продолжительности жизни</option>
+              <option>по году</option>
+            </select>
+            <input type="checkbox" name="order" id="8"/>
+            <label for="8">по убыванию</label>
+          </div>
+          <div class="content__sort__block">
+            <select>
+              <option>нет</option>
+              <option>по размеру</option>
+              <option>по весу</option>
+              <option>по продолжительности жизни</option>
+              <option>по году</option>
+            </select>
+            <input type="checkbox" name="order" id="9"/>
+            <label for="9">по убыванию</label>
+          </div>
+          <div class="content__sort__block">
+            <select>
+              <option>нет</option>
+              <option>по размеру</option>
+              <option>по весу</option>
+              <option>по продолжительности жизни</option>
+              <option>по году</option>
+            </select>
+            <input type="checkbox" name="order" id="10"/>
+            <label for="10">по убыванию</label>
+          </div>
+          <div class="content__sort__block">
+            <select>
+              <option>нет</option>
+              <option>по размеру</option>
+              <option>по весу</option>
+              <option>по продолжительности жизни</option>
+              <option>по году</option>
+            </select>
+            <input type="checkbox" name="order" id="11"/>
+            <label for="11">по убыванию</label>
+          </div>
+        </form>
+      </details>
+      <details class="content__filter">
+        <summary>Фильтр</summary>
+        <form>
+          <div class="content__filter__block">
+            <label>Порода: </label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Длина шерсти: </label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Год: </label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Страна: </label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Размер: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Вес: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Продолжительность жизни: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+        </form>
+      </details>
+      <div class="content__tab__scrolltable">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Название породы</th>
+              <th>Средний размер</th>
+              <th>Средний вес</th>
+              <th>Длина шерсти</th>
+              <th>Cредняя продолжительность жизни</th>
+              <th>Страна происхождения</th>
+              <th>Год появление породы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Абисинская</td>
+              <td>29</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>16</td>
+              <td>Эфиопия</td>
+              <td>1882</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Австралийский мист</td>
+              <td>17</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>14</td>
+              <td>Австралия</td>
+              <td>1998</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Американская короткошерстная</td>
+              <td>22</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>14</td>
+              <td>США</td>
+              <td>1904</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Американская жесткошерстная</td>
+              <td>27</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>14</td>
+              <td>США</td>
+              <td>1966</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Американский бобтейл</td>
+              <td>32</td>
+              <td>6</td>
+              <td>Длинношерстная</td>
+              <td>14</td>
+              <td>США</td>
+              <td>1960</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Американский кёрл</td>
+              <td>27</td>
+              <td>5</td>
+              <td>Полудлинношерстная</td>
+              <td>16</td>
+              <td>США</td>
+              <td>1986</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Аравийский мау</td>
+              <td>27</td>
+              <td>7</td>
+              <td>Короткошерстная</td>
+              <td>15</td>
+              <td>Саудовская Аравия</td>
+              <td>1023</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Балинезийская</td>
+              <td>24</td>
+              <td>3</td>
+              <td>Полудлинношерстная</td>
+              <td>12</td>
+              <td>США</td>
+              <td>1988</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Бамбино</td>
+              <td>22</td>
+              <td>3</td>
+              <td>Лысая</td>
+              <td>11</td>
+              <td>США</td>
+              <td>2005</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Бенгальская</td>
+              <td>34</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1983</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Бирманская</td>
+              <td>27</td>
+              <td>4</td>
+              <td>Полудлинношерстная</td>
+              <td>13</td>
+              <td>Мьянма</td>
+              <td>1925</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Бомбейская</td>
+              <td>25</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>17</td>
+              <td>США</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Бразильская короткошерстная</td>
+              <td>22</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Бразилия</td>
+              <td>1980</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Британская длинношерстная</td>
+              <td>31</td>
+              <td>6</td>
+              <td>Длинношерстная</td>
+              <td>12</td>
+              <td>Великобритания</td>
+              <td>1917</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Британская короткошерстная</td>
+              <td>22</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>12</td>
+              <td>Великобритания</td>
+              <td>1889</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Гималайская</td>
+              <td>28</td>
+              <td>5</td>
+              <td>Длинношерстная</td>
+              <td>15</td>
+              <td>США</td>
+              <td>1935</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Донской сфинкс</td>
+              <td>28</td>
+              <td>3</td>
+              <td>Лысая</td>
+              <td>12</td>
+              <td>Россия</td>
+              <td>1986</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>Дракон Ли</td>
+              <td>34</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Китай</td>
+              <td>2003</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>Египетская мау</td>
+              <td>28</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>14</td>
+              <td>Египет</td>
+              <td>1958</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Канадский сфинкс</td>
+              <td>20</td>
+              <td>4</td>
+              <td>Лысая</td>
+              <td>15</td>
+              <td>Канада</td>
+              <td>1966</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>Колорпойнт короткошерстный</td>
+              <td>22</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>16</td>
+              <td>США</td>
+              <td>1974</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>Корниш-рекс</td>
+              <td>25</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>15</td>
+              <td>Великобритания</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>Короткошерстный ориентал</td>
+              <td>30</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>17</td>
+              <td>Таиланд</td>
+              <td>1899</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>Курильский бобтейл</td>
+              <td>26</td>
+              <td>6</td>
+              <td>Полудлинношерстная</td>
+              <td>13</td>
+              <td>Россия</td>
+              <td>1991</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>Лаперам</td>
+              <td>26</td>
+              <td>4</td>
+              <td>Длинношерстная</td>
+              <td>12</td>
+              <td>США</td>
+              <td>1982</td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>Мачкин</td>
+              <td>14</td>
+              <td>2</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1983</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>Мейн-кун</td>
+              <td>33</td>
+              <td>7</td>
+              <td>Длинношерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1908</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>Невская маскарадная</td>
+              <td>30</td>
+              <td>7</td>
+              <td>Длинношерстная</td>
+              <td>15</td>
+              <td>Россия</td>
+              <td>1988</td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>Немецкий рекс</td>
+              <td>25</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>15</td>
+              <td>Германия</td>
+              <td>1931</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>Норвежская лесная</td>
+              <td>29</td>
+              <td>6</td>
+              <td>Длинношерстная</td>
+              <td>13</td>
+              <td>Норвегия</td>
+              <td>1938</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>Персидская</td>
+              <td>28</td>
+              <td>5</td>
+              <td>Длинношерстная</td>
+              <td>13</td>
+              <td>Иран</td>
+              <td>1620</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>Петербургские сфинксы</td>
+              <td>27</td>
+              <td>4</td>
+              <td>Лысая</td>
+              <td>9</td>
+              <td>Россия</td>
+              <td>1994</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>Пиксибоб</td>
+              <td>22</td>
+              <td>6</td>
+              <td>Полудлинношерстная</td>
+              <td>12</td>
+              <td>США</td>
+              <td>1986</td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td>Русская голубая</td>
+              <td>25</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>18</td>
+              <td>Россия</td>
+              <td>1875</td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td>Саванна</td>
+              <td>55</td>
+              <td>11</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1986</td>
+            </tr>
+            <tr>
+              <td>36</td>
+              <td>Сиамская</td>
+              <td>26</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Таиланд</td>
+              <td>1767</td>
+            </tr>
+            <tr>
+              <td>37</td>
+              <td>Сибирская</td>
+              <td>34</td>
+              <td>7</td>
+              <td>Длинношерстная</td>
+              <td>17</td>
+              <td>Россия</td>
+              <td>1989</td>
+            </tr>
+            <tr>
+              <td>38</td>
+              <td>Сингапурская</td>
+              <td>21</td>
+              <td>2</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Сингапур</td>
+              <td>1976</td>
+            </tr>
+            <tr>
+              <td>39</td>
+              <td>Скотиш-спрайт</td>
+              <td>29</td>
+              <td>4</td>
+              <td>Короткошерстная</td>
+              <td>14</td>
+              <td>Великобритания</td>
+              <td>1961</td>
+            </tr>
+            <tr>
+              <td>40</td>
+              <td>Сноу-шу</td>
+              <td>30</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>12</td>
+              <td>США</td>
+              <td>1982</td>
+            </tr>
+            <tr>
+              <td>41</td>
+              <td>Сомалийская</td>
+              <td>28</td>
+              <td>4</td>
+              <td>Полудлинношерстная</td>
+              <td>14</td>
+              <td>США</td>
+              <td>1972</td>
+            </tr>
+            <tr>
+              <td>42</td>
+              <td>Тайская</td>
+              <td>27</td>
+              <td>6</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Таиланд</td>
+              <td>1984</td>
+            </tr>
+            <tr>
+              <td>43</td>
+              <td>Турецкая ангора</td>
+              <td>28</td>
+              <td>3</td>
+              <td>Длинношерстная</td>
+              <td>16</td>
+              <td>Турция</td>
+              <td>1973</td>
+            </tr>
+            <tr>
+              <td>44</td>
+              <td>Турецкий ван</td>
+              <td>35</td>
+              <td>6</td>
+              <td>Длинношерстная</td>
+              <td>19</td>
+              <td>Турция</td>
+              <td>1955</td>
+            </tr>
+            <tr>
+              <td>44</td>
+              <td>Украинский левкой</td>
+              <td>25</td>
+              <td>5</td>
+              <td>Лысая</td>
+              <td>13</td>
+              <td>Украина</td>
+              <td>2004</td>
+            </tr>
+            <tr>
+              <td>45</td>
+              <td>Хайленд фолд</td>
+              <td>29</td>
+              <td>4</td>
+              <td>Длинношерстная</td>
+              <td>16</td>
+              <td>Великобритания</td>
+              <td>1961</td>
+            </tr>
+            <tr>
+              <td>46</td>
+              <td>Цейлонская</td>
+              <td>22</td>
+              <td>3</td>
+              <td>Короткошерстная</td>
+              <td>15</td>
+              <td>Шри-Ланка</td>
+              <td>1984</td>
+            </tr>
+            <tr>
+              <td>47</td>
+              <td>Чаузи</td>
+              <td>45</td>
+              <td>12</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1995</td>
+            </tr>
+            <tr>
+              <td>48</td>
+              <td>Шотландская вислоухая</td>
+              <td>25</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Великобритания</td>
+              <td>1961</td>
+            </tr>
+            <tr>
+              <td>49</td>
+              <td>Экзотическая короткошерстная</td>
+              <td>28</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>США</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>50</td>
+              <td>Японский бобтейл</td>
+              <td>25</td>
+              <td>5</td>
+              <td>Короткошерстная</td>
+              <td>13</td>
+              <td>Япония</td>
+              <td>1011</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2024 </p>
+    </div>
+  </body>
+</html>

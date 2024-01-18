@@ -1,0 +1,117 @@
+SET_HTML_PAGE()
+  &::-webkit-scrollbar
+    display none
+  body
+    inset:0
+    margin 0
+    padding 0
+
+CREATE_GRID_TEMPLATE(rowwidth, columnwidth, backcolor)
+  display grid
+  grid-template-rows rowwidth
+  grid-template-columns columnwidth
+  background-color backcolor
+
+SET_FONT_STYLE(weight, letterspace, size, stylename, decor, fcolor)
+  font-weight weight
+  letter-spacing: letterspace
+  font-size size
+  font-family stylename
+  text-decoration: decor
+  color fcolor
+
+SET_CONTENT_NAVIGATION()
+  CREATE_GRID_TEMPLATE(1fr,1fr 2fr, #fff)
+  position sticky
+  inset 0
+  width 100vw
+  height auto
+  z-index 10
+  box-shadow: 7px 8px 25px 10px rgba(0,0,0, 0.17);
+  .content__navigation__left
+    SET_CONTENT_NAVIGATION_LEFT()
+  .content__navigation__right
+    SET_CONTENT_NAVIGATION_RIGHT()
+
+SET_CONTENT_NAVIGATION_LEFT()
+  margin-left 2%
+  a[href='main.html']
+    SET_FONT_STYLE(400, normal, 4vw,'Roboto Slab', none, #1D1408)
+    &:hover
+      SET_FONT_STYLE(400, normal, 4vw,'Roboto Slab', none, #113E25)
+      transition: .3s linear
+      padding:0.5% 0 0 1%
+    &:active
+      SET_FONT_STYLE(400, normal, 4vw,'Roboto Slab', none, #617A44)
+SET_CONTENT_NAVIGATION_RIGHT()
+  CREATE_GRID_TEMPLATE(1fr,repeat(6,auto), #fff)
+  column-gap 1vw
+  padding-top 1%
+  a
+    SET_FONT_STYLE(400, normal, 5vw,'Noto Serif Display', none, #1D1408)
+    &:hover
+      SET_FONT_STYLE(400, normal, 5vw,'Noto Serif Display', underline, #617A44)
+      transition: .3s linear
+    &:active
+      color:#113E25
+
+SET_FOOTER()
+  clear: both
+  background-color #c5466f
+  text-align: center
+  padding:1%;
+  SET_FONT_STYLE(400, normal, 1.5vw, 'Roboto Slab', none, #000)
+
+html
+  SET_HTML_PAGE()
+
+  .content
+    .content__navigation
+      SET_CONTENT_NAVIGATION()
+    .content__navigation__left__dismenu
+    .content__navigation__left__dismenu__hiddenmenu
+      display: none
+  .footer
+    SET_FOOTER()
+//
+//
+@media(max-width 300px)
+  .content
+    .content__navigation
+      .content__navigation__right
+        SET_FONT_STYLE(400, normal, 2vw,'Noto Serif Display', none, #1D1408)
+        display: block
+
+        &:hover
+          SET_FONT_STYLE(400, normal, 2vw,'Noto Serif Display', underline, #617A44)
+          transition: .3s linear
+
+      .content__navigation__left
+        text-align: center
+        grid-column: 1/3
+        font-size 1rem
+        .content__navigation__left__dismenu
+          display: block
+          position: absolute
+          top 0
+          left 0
+
+          &:hover .content__navigation__left__dismenu__hiddenmenu
+            display: block
+            position: absolute
+            background-color: #fff
+
+            a
+              SET_FONT_STYLE(400, normal, 1rem,'Noto Serif Display', none, #1D1408)
+              display: block
+
+              &:hover
+                SET_FONT_STYLE(400, normal, 1rem,'Noto Serif Display', underline, #617A44)
+                transition: .3s linear
+
+      .content__navigation__right
+        a
+          display: none
+  .footer
+    p
+      SET_FONT_STYLE(400, normal, 1rem, 'Roboto Slab', none, #c5466f)

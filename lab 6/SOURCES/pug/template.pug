@@ -1,0 +1,40 @@
+block variables
+
+mixin CREATE_HEAD()
+    meta(charset="utf-8")
+    title #{title}
+    link(rel='stylesheet', href='../css/'+stylename)
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+
+    link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&family=Exo+2:wght@100&display=swap" rel="stylesheet")
+
+
+mixin CREATE_NAV_HEADER()
+    div.content__navigation__left
+        div.content__navigation__left__dismenu__hiddenmenu
+            each value,key in {'Таблица пород':'table.html','Породы кошек':'main.html'}
+                a(href=value)=key
+
+    div.content__navigation__right
+        each value,key in {'Таблица пород':'table.html','Породы кошек':'main.html'}
+            a(href=value)=key
+
+
+
+mixin CREATE_FOOTER(footertext)
+    p=footertext
+
+doctype html
+html(lang="ru")
+    head
+        +CREATE_HEAD(title, stylename)
+    body
+        div.content
+            div.content__navigation
+                +CREATE_NAV_HEADER()
+            block main_content
+
+        div.footer
+            +CREATE_FOOTER('© 2024 ')

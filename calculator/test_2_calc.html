@@ -1,0 +1,65 @@
+<body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор комплексных чисел</title>
+    <link rel ="stylesheet" href="test_2_calc.css">
+</head>
+<body>
+<div class="wrapper">
+    <h2>Калькулятор комплексных чисел</h2>
+    <div>
+        <label>Выберите форму представления комплексного числа:</label>
+        <input type="radio" id="alg" name="representation" checked>
+        <label for="alg">Алгебраическая</label>
+        <input type="radio" id="exp" name="representation">
+        <label for="exp">Показательная</label>
+        <br><br>
+        <button onclick="show()">Показать</button>
+    </div>
+
+        <div id="algebraic", class="disable">
+            <label>Введите комплексное число:</label>
+            <input type="text" id="realPart" placeholder="Действительная часть">
+            <input type="text" id="imaginaryPart" placeholder="Мнимая часть" >
+        </div>
+        <div id="exponential", class="disable">
+            <label>Введите комплексное число:</label>
+            <input type="text" id="module" placeholder="Модуль числа">
+            <input type="text" id="arg" placeholder="Аргумент числа">
+        </div>
+        <div id="calc", class="calculate">
+            <br><br>
+            <label >Выберите операции:</label>
+            <input type="checkbox" id="argumentOp" name="operations" value="argument">
+            <label for="argumentOp" id="argumentOpLabel" class="alert">Аргумент</label>
+            <input type="checkbox" id="imaginaryOp" name="operations" value="imaginary">
+            <label for="argumentOpLabel" id="imaginaryOpLabel" class="alert">Мнимая часть</label>
+            <input type="checkbox" id="modulusOp" name="operations" value="modulus">
+            <label for="modulusOp" id="modulusOpLabel" class="alert">Модуль</label>
+            <br><br>
+            <button id="calculate" onclick="calculate()">Вычислить</button>
+            <button type="submit" id="del" onclick="clearFields()">Очистить</button>
+        </div>
+
+
+
+    <div id="ansAlg" class="ans">
+        <output role="status" id="argAlg"></output>
+        <output role="status" id="imgAlg"></output>
+        <output role="status" id="modAlg"></output>
+        <output role="status" id="expForm"></output>
+    </div>
+    <div id="ansExp" class="ans">
+        <output role="status" id="argExp"></output>
+        <output role="status" id="imgExp"></output>
+        <output role="status" id="modExp"></output>
+        <output role="status" id="algForm"></output>
+    </div>
+</div>
+<script type = "text/javascript" src = "test_2_calc.js"></script>
+</body>
+</html>
+</body>
+</html>

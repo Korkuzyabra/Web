@@ -1,0 +1,19 @@
+.disable{
+    display: none;
+}
+.calculate{
+    display: none;
+    gap: 5px;
+}
+.ans{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border-color: black;
+}
+
+.alert{
+    color: black;
+}

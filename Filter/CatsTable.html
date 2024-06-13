@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица породы кошек</title>
+
+</head>
+<body>
+    <p>
+        <a href="CatsTable.html">Таблица породы кошек</a><br>
+        <a href="CatsMain.html">Породы кошек</a>
+    </p>
+    <hr color="#926eae">
+    <details>
+        <summary>График</summary>
+        <form>
+            <p>Значение по оси OX</p>
+            <input type="radio" name="ox" value="Длина шерсти" id="catName">Длина шерсти<br>
+            <input type="radio" name="ox" value="Страна происхождения" id="catCountry">Страна происхождения<br>
+            <p>Значение по оси OY</p>
+            <input type="checkbox" name="oy" id="catSizeMin" value="Средний размер" onclick="changeState(this.form, value)">Минимальный размер<br>
+            <input type="checkbox" name="oy" id="catSizeMax" value="Средний размер" onclick="changeState(this.form, value)">Максимальный размер<br>
+            <input type="checkbox" name="oy" id="catWeightMin" value="Средний вес" onclick="changeState(this.form, value)">Минимальный вес<br>
+            <input type="checkbox" name="oy" id="catWeightMax" value="Средний вес" onclick="changeState(this.form, value)">Максимальный вес<br>
+            <input type="checkbox" name="oy" id="catAgeMin" value="Средняя продолжительность жизни" onclick="changeState(this.form, value)">Минимальная продолжительность жизни<br>
+            <input type="checkbox" name="oy" id="catAgeMax" value="Средняя продолжительность жизни" onclick="changeState(this.form, value)">Максимальная продолжительность жизни<br>
+            <p>
+                <input type="button" value="Построить" onclick="drawGraph(this.form)">
+            </p>
+        </form>
+            <svg height="10"></svg>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form id="filter">
+            <p>
+                <label for="CatType2">Порода:</label>
+                <input type="text" id="CatType2">
+            </p>
+            <p>
+                <label for="CatType3">Длина шерсти:</label>
+                <input type="text" id="CatType3">
+            </p>
+            <p>
+                <label for="CatType4">Год:</label>
+                <input type="text" id="CatType4">
+            </p>
+            <p>
+                <label for="CatType5">Страна:</label>
+                <input type="text" id="CatType5">
+            </p>
+            <p>
+                <label for="CatType6From">Размер от:</label>
+                <input type="number" id="CatType6From">
+                <label for="CatType7To"> до </label>
+                <input type="number" id="CatType7To">
+            </p>
+            <p>
+                <label for="CatType8From">Вес от:</label>
+                <input type="number" id="CatType8From">
+                <label for="CatType9To"> до </label>
+                <input type="number" id="CatType9To">
+            </p>
+            <p>
+                <label for="CatType10From">Продолжительность жизни от:</label>
+                <input type="number" id="CatType10From">
+                <label for="CatType11To"> до </label>
+                <input type="number" id="CatType11To">
+            </p>
+            <p>
+                <input id="search" type="button" value="Фильтровать">
+                <input type="button" value="Очистить" id="clear">
+            </p>
+        </form>
+    </details>
+    <details>
+        <summary>Сортировака</summary>
+        <form id="sort">
+            <p>
+                <label for="sort1">Первый уровень:</label>
+                <select id="sort1"></select>
+                <input type="checkbox" name="sortmin" value="min" id="sort1Desc"> По убыванию
+            </p>
+            <p>
+                <label for="sort2">Второй уровень:</label>
+                <select id="sort2"></select>
+                <input type="checkbox" name="sortmin" value="min" id="sort2Desc"> По убыванию
+            </p>
+            <p>
+                <label for="sort3">Третий уровень:</label>
+                <select id="sort3"></select>
+                <input type="checkbox" name="sortmin" value="min" id="sort3Desc"> По убыванию
+            </p>
+            <p>
+                <input type="button" value="Сортировать" id="Sort_btn">
+                <input type="button" value="Сбросить сортировку" id="Clear_btn">
+            </p>
+        </form>
+    </details>
+        </form>
+    <table id='list' border="3" align="left" valign="top" bgcolor="#abff05">
+    </table>
+    <script src="http://d3js.org/d3.v7.min.js"></script>
+    <script type = "text/javascript" src = "filter.js"></script>
+    <script type = "text/javascript" src = "data.js"></script>
+</body>
+</html>

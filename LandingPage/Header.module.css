@@ -1,0 +1,18 @@
+.wrapper{
+    border-bottom: 1px solid black;
+    padding: 2em 2em 2em;
+    width: 96%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menuButton{
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+}
+.menuButton:hover{
+    color: #701669;
+    font-size: 30px;
+}
